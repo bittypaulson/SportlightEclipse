@@ -11,7 +11,10 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-public class Appium1 {
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
+public class Appium1 extends BaseClass {
 
   private AndroidDriver driver;
 
@@ -35,14 +38,25 @@ public class Appium1 {
 
   @Test
   public void sampleTest() {
+	  
+//	   // creates a toggle for the given test, adds all log events under it    
+//      ExtentTest test1 =extent.createTest("MyFirstTest", "Sample description for demo");
+//  
+//      // log(Status, details)
+//      test1.log(Status.INFO, "Test One started");
+      
     MobileElement el1 = (MobileElement) driver.findElementById("com.roninaks.sportlight:id/edt_username");
     el1.click();
+//    // log(Status, details)
+//    test1.log(Status.PASS, "el1");
     el1.sendKeys("glory@gmail.com");
     MobileElement el2 = (MobileElement) driver.findElementById("com.roninaks.sportlight:id/edt_password");
     el2.click();
     el2.sendKeys("Glory@123");
     MobileElement el3 = (MobileElement) driver.findElementById("com.roninaks.sportlight:id/btn_log_in");
     el3.click();
+//    // log(Status, details)
+//    test1.log(Status.INFO, "Test One Completed");
   }
 
 //  @After

@@ -11,7 +11,7 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public class LoginTest {
+public class BaseClass extends ExtentReportsDemo{
 	static AppiumDriver<MobileElement> driver;
 	public static void main(String[] args) {
 		try {
